@@ -1,0 +1,16 @@
+.instructor-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    /* background-color: aqua; */
+ 
+}
+.tdata{
+    border: 1px solid black;
+    font-size: 25px;
+    text-align: center;
+    padding: 5px;
+    width: 200px;
+}

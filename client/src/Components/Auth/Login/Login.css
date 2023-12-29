@@ -1,0 +1,19 @@
+.loginform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    /* background-color: aqua; */
+    font-size: 25px;
+}
+.login-input{
+    padding: 10px;
+    margin: 5px;
+    font-size: 15px;
+}
+.login-button{
+    padding: 10px;
+    font-size: 15px;
+    margin: 10px;
+}

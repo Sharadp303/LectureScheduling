@@ -1,0 +1,17 @@
+.adminpanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.link{
+    border: 1px solid black;
+    border-radius:15px ;
+    margin:10px;
+    width: 250px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
