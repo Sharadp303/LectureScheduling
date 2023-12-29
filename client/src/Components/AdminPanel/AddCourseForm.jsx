@@ -19,7 +19,7 @@ const AddCourseForm = () => {
     try {
       // Make API request to create a new course
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:7777/course', {
+      const response = await axios.post(`${process.env.REACT_APP_ReactUrl}/course`, {
         name,
         level,
         description,

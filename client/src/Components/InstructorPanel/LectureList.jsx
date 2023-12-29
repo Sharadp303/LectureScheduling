@@ -15,7 +15,7 @@ const LectureList = () => {
         const decodedToken = jwtDecode(token)
         const cid=decodedToken.user._id
         // Make API request to get the list of lectures for the logged-in instructor
-        const response = await axios.get(`http://localhost:7777/lecture/${cid}`);
+        const response = await axios.get(`${process.env.REACT_APP_ReactUrl}/lecture/${cid}`);
         setLectures(response.data);
       } catch (error) {
         console.error('Error fetching lectures:', error); // Handle error

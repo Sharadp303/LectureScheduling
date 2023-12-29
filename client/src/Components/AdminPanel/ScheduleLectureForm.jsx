@@ -18,7 +18,7 @@ const LectureScheduleForm = () => {
   const fetchAvailableInstructors = useCallback(async (selectedDate) => {
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:7777/instructor/api/available', {
+      const response = await axios.post(`${process.env.REACT_APP_ReactUrl}/instructor/api/available`, {
         date: selectedDate || date,
       });
       setAvailableInstructors(response.data);
@@ -31,7 +31,7 @@ const LectureScheduleForm = () => {
 
   const fetchCourses = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:7777/course');
+      const response = await axios.get(`${process.env.REACT_APP_ReactUrl}/course`);
       setCourses(response.data);
     } catch (error) {
       console.error('Error fetching courses:', error);
@@ -72,7 +72,7 @@ const LectureScheduleForm = () => {
     try {
       setLoading(true);
       // Make API request to schedule a new lecture
-      const response = await axios.post(`http://localhost:7777/lecture/${selectedCourse}/${selectedInstructor}`, {
+      const response = await axios.post(`${process.env.REACT_APP_ReactUrl}/lecture/${selectedCourse}/${selectedInstructor}`, {
         date,
       });
 

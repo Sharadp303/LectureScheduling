@@ -10,7 +10,7 @@ const InstructorList = () => {
     // Fetch the list of instructors when the component mounts
     const fetchInstructors = async () => {
       try {
-        const response = await axios.get('http://localhost:7777/instructor');
+        const response = await axios.get(`${process.env.REACT_APP_ReactUrl}/instructor`);
         setInstructors(response.data);
       } catch (error) {
         console.error('Error fetching instructors:', error);

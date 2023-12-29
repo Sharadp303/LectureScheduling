@@ -6,6 +6,8 @@ import ErrorMessage from '../../Common/ErrorMessage';
 import './Login.css'
 
 
+
+
 const LoginForm = () => {
   
   const [username, setUsername] = useState('');
@@ -20,7 +22,8 @@ const LoginForm = () => {
     e.preventDefault();
     try {
       // Make API request to authenticate user
-      const response = await axios.post('http://localhost:7777/login', {
+      console.log(process.env.ReactUrl)
+      const response = await axios.post(`${process.env.REACT_APP_ReactUrl}/login`, {
         username,
         password,
       });
@@ -41,6 +44,9 @@ const LoginForm = () => {
     } catch (error) {
       console.error('Error logging in:', error); // Handle error
       setError('Invalid credentials. Please try again.');
+      setTimeout(()=>{
+        setError(null)
+      },2000)
     }
   };
 
