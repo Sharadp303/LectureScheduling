@@ -55,9 +55,11 @@ const LoginForm = () => {
       <h2>Login</h2>
       {error && <ErrorMessage message={error} />}
       <form onSubmit={handleSubmit}>
-        {<input className='login-input' required type="text" placeholder='UserName' value={username} onChange={(e)=>setUsername(e.target.value)}/>}
-        {<input className='login-input' required type="password" placeholder='Password'value={password} onChange={(e)=>setPassword(e.target.value)}/>}
-        <button className='login-button' type="submit">Login</button>
+          <div className='inputContainer'>
+              {<input className='login-input' required type="text" placeholder='UserName' value={username} onChange={(e)=>setUsername(e.target.value)}/>}
+              {<input className='login-input' required type="password" placeholder='Password'value={password} onChange={(e)=>setPassword(e.target.value)}/>}
+              <button className='login-button' type="submit">Login</button>
+          </div>
       </form>
       <p>Don't have an account? <Link to="/register">Register here</Link>.</p>
     </div>
